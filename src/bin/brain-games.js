@@ -1,1 +1,2 @@
-import readlineSync from '../index.js';
+import readlineSync from '../index';
+
