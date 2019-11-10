@@ -1,2 +1,1 @@
 import readlineSync from '../index';
-
