@@ -1,5 +1,5 @@
 import {
-  welcome, hello, makeRandomNumber, makeUserAnswer,
+  welcome, hello, makeRandomNumber, makeUserAnswer, generateToString,
 } from '../index';
 
 const brainCalc = () => {
@@ -11,7 +11,7 @@ const brainCalc = () => {
       return '-';
     } return '*';
   };
-  const generateToString = (num1, oper, num2) => `${num1} ${oper} ${num2}`;
+  /*  const generateToString = (num1, oper, num2) => `${num1} ${oper} ${num2}`; */
   welcome();
   console.log('What is the result of the expression?');
   const userName = hello();
