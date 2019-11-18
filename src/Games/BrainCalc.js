@@ -16,11 +16,10 @@ const brainCalc = () => {
   console.log('What is the result of the expression?');
   const userName = hello();
   console.log(`Hello, ${userName}!`);
-  let answerCounter = 0;
   let ans = 0;
   for (let i = 0; i < 3; i += 1) {
-    const number1 = makeRandomNumber();
-    const number2 = makeRandomNumber();
+    const number1 = makeRandomNumber(30);
+    const number2 = makeRandomNumber(30);
     const randomOperator = makeRandomOperator();
     const toString = generateToString(number1, randomOperator, number2);
     if (randomOperator === '+') {
@@ -34,15 +33,14 @@ const brainCalc = () => {
     const answer = makeUserAnswer();
     if (+answer === +ans) {
       console.log('Correct!');
-      answerCounter += 1;
     } else {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${ans}'.
 Let's try again, ${userName}!`);
       break;
     }
-  }
-  if (answerCounter === 3) {
-    console.log(`Congratulations, ${userName}!`);
+    if (i === 2) {
+      console.log(`Congratulations, ${userName}!`);
+    }
   }
 };
 

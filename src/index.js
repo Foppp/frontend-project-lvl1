@@ -5,7 +5,7 @@ const hello = () => {
   const name = readlineSync.question('May I have your name? ');
   return name;
 };
-const makeRandomNumber = () => Math.floor(Math.random() * 30);
+const makeRandomNumber = (n) => Math.ceil(Math.random() * n);
 const generateToString = (num1, oper, num2) => `${num1} ${oper} ${num2}`;
 const pareToString = (num1, num2) => `${num1} ${num2}`;
 const makeUserAnswer = () => {
@@ -20,6 +20,21 @@ const makeBiggerDiv = (x, y) => {
     }
   } return biggerDiv;
 };
+const isPrime = (a) => {
+  for (let i = 2; i <= a; i += 1) {
+    if (a % i === 0 && a !== 2) {
+      return 'no';
+    } return 'yes';
+  } return 'Error';
+};
+const isEven = (b) => {
+  if (b % 2 === 0) {
+    return 'yes';
+  } return 'no';
+};
+
 export {
-  welcome, hello, makeRandomNumber, makeUserAnswer, generateToString, makeBiggerDiv, pareToString,
+  welcome, hello, makeRandomNumber,
+  generateToString, makeBiggerDiv, pareToString, isPrime,
+  isEven, makeUserAnswer,
 };

@@ -7,11 +7,10 @@ const brainProgression = () => {
   console.log('What number is missing in the progression?');
   const userName = hello();
   console.log(`Hello, ${userName}!`);
-  let answerCounter = 0;
   for (let i = 0; i < 3; i += 1) {
     const makeRandomDisNumber = () => Math.ceil(Math.random() * 8) + 2;
     const randomDisNum = makeRandomDisNumber();
-    const randomProgressNum = makeRandomNumber();
+    const randomProgressNum = makeRandomNumber(30);
     let progressNum = 1;
     let disNum = 0;
     let newStr = '';
@@ -28,15 +27,14 @@ const brainProgression = () => {
     const answer = makeUserAnswer();
     if (+answer === +disNum) {
       console.log('Correct!');
-      answerCounter += 1;
     } else {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${disNum}'.
     Let's try again, ${userName}!`);
       break;
     }
-  }
-  if (answerCounter === 3) {
-    console.log(`Congratulations, ${userName}!`);
+    if (i === 2) {
+      console.log(`Congratulations, ${userName}!`);
+    }
   }
 };
 
