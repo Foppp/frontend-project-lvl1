@@ -3,24 +3,24 @@ import {
 } from '../index';
 
 const brainPrime = () => {
-  welcome();
+  welcome(); // Welcome to the brain games
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
-  const userName = hello();
+  const userName = hello(); // May i Have your name?
   console.log(`Hello, ${userName}!`);
   for (let i = 0; i < 3; i += 1) {
-    const randomNum = makeRandomNumber(100);
-    const isPrimeNumber = isPrime(randomNum);
+    const randomNum = makeRandomNumber(100); // generate random number from 1 to 100
+    const isPrimeNumber = isPrime(randomNum); // taking a value if number is prime (from index.js)
     console.log(`Question: ${randomNum} ?`);
-    const answer = makeUserAnswer();
+    const answer = makeUserAnswer(); // taking a value from user unswer
     if (answer === isPrimeNumber) {
       console.log('Correct!');
     } else {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${isPrimeNumber}'.
-  Let's try again, ${userName}!`);
+Let's try again, ${userName}!`);
       break;
     }
     if (i === 2) {
-      console.log(`Congratulations, ${userName}!`);
+      console.log(`Congratulations, ${userName}!`); // after 3 correct answers
     }
   }
 };
