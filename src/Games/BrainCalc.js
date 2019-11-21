@@ -21,12 +21,15 @@ const brainCalc = () => {
     const number2 = makeRandomNumber(30); // Generate second number...
     const randomOperator = makeRandomOperator(); // taking a generated operator
     const toString = generateToString(number1, randomOperator, number2); // string for qiestion
-    if (randomOperator === '+') {
-      ans = number1 + number2;
-    } if (randomOperator === '-') {
-      ans = number1 - number2;
-    } if (randomOperator === '*') {
-      ans = number1 * number2;
+    switch (randomOperator) {
+      case '+':
+        ans = number1 + number2;
+        break;
+      case '-':
+        ans = number1 - number2;
+        break;
+      default:
+        ans = number1 * number2;
     }
     console.log(`Question: ${toString} ?`);
     const answer = makeUserAnswer(); // taking a value from user unswer

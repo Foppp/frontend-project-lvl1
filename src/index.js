@@ -1,7 +1,6 @@
 const readlineSync = require('readline-sync');
 
 const welcome = () => console.log('Welcome to the Brain Games!');
-
 const hello = () => {
   const name = readlineSync.question('May I have your name? ');
   return name;
