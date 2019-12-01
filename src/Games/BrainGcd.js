@@ -1,30 +1,31 @@
 import {
-  welcome, hello, makeUserAnswer, pareToString, makeRandomNumber, makeBiggerDiv,
+  welcome, hello, makeRandomNumber, questionAndResult,
 } from '../index';
 
 const brainGcd = () => {
-  welcome(); // Welcome to the brain games
-  console.log('Find the greatest common divisor of given numbers.');
-  const userName = hello(); // May i Have your name?
-  console.log(`Hello, ${userName}!`);
+  console.log(' ');
+  const gameRule = 'Find the greatest common divisor of given numbers.';
+  welcome(gameRule);
+  console.log(' ');
+  const userName = hello();
+  console.log(' ');
+  const makeBiggerDiv = (x, y) => {
+    let biggerDiv = 0;
+    for (let i = 1, k = 1; i < x; k < y, i += 1, k += 1) {
+      if (x % i === 0 && y % k === 0) {
+        biggerDiv = i;
+      }
+    } return biggerDiv;
+  };
   for (let i = 0; i < 3; i += 1) {
-    const number1 = makeRandomNumber(50); // generate first random number from 1 to 50
-    const number2 = makeRandomNumber(50); // generate second random number from 1 to 50
-    const biggerDivider = makeBiggerDiv(number1, number2); // taking a value of bigger divider
-    const toString = pareToString(number1, number2); // making string for question
-    console.log(`Question: ${toString} ?`);
-    const answer = makeUserAnswer(); // taking a value from user unswer
-    if (+answer === +biggerDivider) {
-      console.log('Correct!');
-    } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${biggerDivider}'.
-Let's try again, ${userName}!`);
+    const number1 = makeRandomNumber(50);
+    const number2 = makeRandomNumber(50);
+    const questionToString = `${number1} ${number2}`;
+    const rightAnswer = makeBiggerDiv(number1, number2).toString();
+    const makeResult = questionAndResult(questionToString, rightAnswer, userName, i);
+    if (makeResult === false) {
       break;
-    }
-    if (i === 2) {
-      console.log(`Congratulations, ${userName}!`); // after 3 correct answers
     }
   }
 };
-
 export default brainGcd;

@@ -2,8 +2,6 @@ import {
   welcome, hello, makeRandomNumber, questionAndResult,
 } from '../index';
 
-// const readlineSync = require('readline-sync');
-
 const brainEven = () => {
   console.log(' ');
   const gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';

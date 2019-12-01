@@ -1,39 +1,34 @@
 import {
-  welcome, hello, makeUserAnswer, makeRandomNumber,
+  welcome, hello, makeRandomNumber, questionAndResult,
 } from '../index';
 
 const brainProgression = () => {
-  welcome(); // Welcome to the brain games
-  console.log('What number is missing in the progression?');
-  const userName = hello(); // May i Have your name?
-  console.log(`Hello, ${userName}!`);
+  console.log(' ');
+  const gameRule = 'What number is missing in the progression?';
+  welcome(gameRule);
+  console.log(' ');
+  const userName = hello();
+  console.log(' ');
   for (let i = 0; i < 3; i += 1) {
-    const makeRandomDisNumber = () => Math.ceil(Math.random() * 8) + 2; // generte disappear number
+    const makeRandomDisNumber = () => Math.ceil(Math.random() * 8) + 2;
     const randomDisNum = makeRandomDisNumber();
-    const randomProgressNum = makeRandomNumber(30); // generate random number from 1 to 30
+    const randomProgressNum = makeRandomNumber(30);
     let progressNum = 1;
     let disNum = 0;
     let newStr = '';
-    for (let k = 2; k <= 10; k += 1) { // generating 10 progression numbers
+    for (let k = 2; k <= 10; k += 1) {
       progressNum += randomProgressNum;
       if (k === randomDisNum) {
-        newStr += '.. '; // added '..' instead dissapear number
-        disNum = progressNum; // saving random dissapear number to variable
+        newStr += '.. ';
+        disNum = progressNum;
         continue;
       }
       newStr += `${progressNum} `;
     }
-    console.log(`Question: ${newStr} ?`);
-    const answer = makeUserAnswer(); // taking a value from user unswer
-    if (+answer === +disNum) {
-      console.log('Correct!');
-    } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${disNum}'.
-Let's try again, ${userName}!`);
+    disNum = disNum.toString();
+    const makeResult = questionAndResult(newStr, disNum, userName, i);
+    if (makeResult === false) {
       break;
-    }
-    if (i === 2) {
-      console.log(`Congratulations, ${userName}!`); // after 3 correct answers
     }
   }
 };

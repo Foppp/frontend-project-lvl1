@@ -9,19 +9,26 @@ const brainCalc = () => {
   console.log(' ');
   const userName = hello();
   console.log(' ');
-  const makeRandomOperator = () => { // Random Operator Function
-    const operator = Math.floor(Math.random() * 3); // Random number 1 -3 for operator generate
-    if (operator === 0) {
-      return '+';
-    } if (operator === 1) {
-      return '-';
-    } return '*';
+  const makeRandomOperator = () => {
+    const operator = Math.floor(Math.random() * 3);
+    let operatorResult = '';
+    switch (operator) {
+      case 0:
+        operatorResult = '+';
+        break;
+      case 1:
+        operatorResult = '-';
+        break;
+      default:
+        operatorResult = '*';
+    }
+    return operatorResult;
   };
   for (let i = 0; i < 3; i += 1) {
     const number1 = makeRandomNumber(30);
     const number2 = makeRandomNumber(30);
     const randomOperator = makeRandomOperator();
-    const toString = `${number1} ${randomOperator} ${number2}`;
+    const questionToString = `${number1} ${randomOperator} ${number2}`;
     const answer = (f) => {
       let ans = 0;
       switch (f) {
@@ -37,7 +44,7 @@ const brainCalc = () => {
       return ans;
     };
     const rightAnswer = answer(randomOperator).toString();
-    const makeResult = questionAndResult(toString, rightAnswer, userName, i);
+    const makeResult = questionAndResult(questionToString, rightAnswer, userName, i);
     if (makeResult === false) {
       break;
     }
