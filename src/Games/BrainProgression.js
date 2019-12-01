@@ -12,12 +12,12 @@ const brainProgression = () => {
   for (let i = 0; i < 3; i += 1) {
     const makeRandomDisNumber = () => Math.ceil(Math.random() * 8) + 2;
     const randomDisNum = makeRandomDisNumber();
-    const randomProgressNum = makeRandomNumber(30);
+    const randomStepBetweenNum = makeRandomNumber(30);
     let progressNum = 1;
     let disNum = 0;
     let newStr = '';
     for (let k = 2; k <= 10; k += 1) {
-      progressNum += randomProgressNum;
+      progressNum += randomStepBetweenNum;
       if (k === randomDisNum) {
         newStr += '.. ';
         disNum = progressNum;
@@ -25,8 +25,9 @@ const brainProgression = () => {
       }
       newStr += `${progressNum} `;
     }
-    disNum = disNum.toString();
-    const makeResult = questionAndResult(newStr, disNum, userName, i);
+    const questionToString = newStr;
+    const rightAnswer = disNum.toString();
+    const makeResult = questionAndResult(questionToString, rightAnswer, userName, i);
     if (makeResult === false) {
       break;
     }
