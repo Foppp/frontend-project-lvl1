@@ -36,8 +36,7 @@ const brainCalc = () => {
       }
       return ans;
     };
-    let rightAnswer = answer(randomOperator);
-    rightAnswer = rightAnswer.toString();
+    const rightAnswer = answer(randomOperator).toString();
     const makeResult = questionAndResult(toString, rightAnswer, userName, i);
     if (makeResult === false) {
       break;
