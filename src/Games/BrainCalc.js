@@ -1,8 +1,14 @@
 import {
-  welcome, hello, makeRandomNumber, makeUserAnswer, generateToString,
+  welcome, hello, makeRandomNumber, questionAndResult,
 } from '../index';
 
 const brainCalc = () => {
+  console.log(' ');
+  const gameRule = 'What is the result of the expression?';
+  welcome(gameRule);
+  console.log(' ');
+  const userName = hello();
+  console.log(' ');
   const makeRandomOperator = () => { // Random Operator Function
     const operator = Math.floor(Math.random() * 3); // Random number 1 -3 for operator generate
     if (operator === 0) {
@@ -11,39 +17,31 @@ const brainCalc = () => {
       return '-';
     } return '*';
   };
-  welcome(); // Welcome to the brain games
-  console.log('What is the result of the expression?');
-  const userName = hello(); // May i Have your name?
-  console.log(`Hello, ${userName}!`);
-  let ans = 0; // Variable for result of two numbers
   for (let i = 0; i < 3; i += 1) {
-    const number1 = makeRandomNumber(30); // Generate first number from 1 to 30 (from index.js)
-    const number2 = makeRandomNumber(30); // Generate second number...
-    const randomOperator = makeRandomOperator(); // taking a generated operator
-    const toString = generateToString(number1, randomOperator, number2); // string for qiestion
-    switch (randomOperator) {
-      case '+':
-        ans = number1 + number2;
-        break;
-      case '-':
-        ans = number1 - number2;
-        break;
-      default:
-        ans = number1 * number2;
-    }
-    console.log(`Question: ${toString} ?`);
-    const answer = makeUserAnswer(); // taking a value from user unswer
-    if (+answer === +ans) {
-      console.log('Correct!');
-    } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${ans}'.
-Let's try again, ${userName}!`);
+    const number1 = makeRandomNumber(30);
+    const number2 = makeRandomNumber(30);
+    const randomOperator = makeRandomOperator();
+    const toString = `${number1} ${randomOperator} ${number2}`;
+    const answer = (f) => {
+      let ans = 0;
+      switch (f) {
+        case '+':
+          ans = number1 + number2;
+          break;
+        case '-':
+          ans = number1 - number2;
+          break;
+        default:
+          ans = number1 * number2;
+      }
+      return ans;
+    };
+    let rightAnswer = answer(randomOperator);
+    rightAnswer = rightAnswer.toString();
+    const makeResult = questionAndResult(toString, rightAnswer, userName, i);
+    if (makeResult === false) {
       break;
-    }
-    if (i === 2) {
-      console.log(`Congratulations, ${userName}!`); // after 3 correct answers
     }
   }
 };
-
 export default brainCalc;

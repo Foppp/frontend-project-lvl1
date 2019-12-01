@@ -1,26 +1,31 @@
 import {
-  welcome, hello, makeRandomNumber, isEven, makeUserAnswer,
+  welcome, hello, makeRandomNumber, questionAndResult,
 } from '../index';
 
+// const readlineSync = require('readline-sync');
+
 const brainEven = () => {
-  welcome(); // Welcome to the brain games
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
-  const userName = hello(); // May i Have your name?
-  console.log(`Hello, ${userName}!`);
+  console.log(' ');
+  const gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
+  welcome(gameRule);
+  console.log(' ');
+  const userName = hello();
+  console.log(' ');
   for (let i = 0; i < 3; i += 1) {
-    const num = makeRandomNumber(30); // generate random number from 1 to 30
-    const makeIsEven = isEven(num); // taking a result of function if number is even from index.js
-    console.log(`Question: ${num} ?`);
-    const answer = makeUserAnswer(); // taking a value from user unswer
-    if (answer === makeIsEven) {
-      console.log('Correct!');
-    } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${makeIsEven}'.
-Let's try again, ${userName}!`);
+    const num = makeRandomNumber(100);
+    const isEvenCheck = (a) => {
+      if (a % 2 === 0) {
+        return true;
+      } return false;
+    };
+    const numberIsEven = () => {
+      const b = isEvenCheck(num) ? 'yes' : 'no';
+      return b;
+    };
+    const rightAnswer = numberIsEven();
+    const makeResult = questionAndResult(num, rightAnswer, userName, i);
+    if (makeResult === false) {
       break;
-    }
-    if (i === 2) {
-      console.log(`Congratulations, ${userName}!`); // after 3 correct answers
     }
   }
 };
