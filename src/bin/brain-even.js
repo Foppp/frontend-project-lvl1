@@ -1,4 +1,3 @@
 #!/usr/bin/env node
-import brainEven from '../Games/BrainEven';
-
-brainEven();
+// eslint-disable-next-line no-unused-vars
+import gameRule from '../Games/BrainEven';
