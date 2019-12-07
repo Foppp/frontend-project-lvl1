@@ -1,5 +1,5 @@
 import {
-  questionAndResult,
+  makeGame, cons,
 } from '../index';
 
 const gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
@@ -12,8 +12,8 @@ const generateQuestion = () => {
     } return false;
   };
   const rightAnswer = isEvenCheck(num) ? 'yes' : 'no';
-  return [num, rightAnswer];
+  return cons(num, rightAnswer);
 };
-questionAndResult(gameRule, generateQuestion());
+const runIt = () => makeGame(gameRule, generateQuestion);
 
-export default gameRule;
+export default runIt;
