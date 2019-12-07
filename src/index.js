@@ -29,5 +29,5 @@ const makeGame = (gameRule, gameData) => {
 };
 
 export {
-  makeGame, cons, car, cdr,
+  makeGame, cons,
 };

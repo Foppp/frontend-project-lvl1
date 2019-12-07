@@ -2,8 +2,9 @@ import {
   makeGame, cons,
 } from '../index';
 
-const gameRule = 'What is the result of the expression?'; // set rule of the game
-const generateQuestion = () => {
+const calcGameRule = 'What is the result of the expression?';
+
+const calcGenerateQuestion = () => {
   const number1 = Math.ceil(Math.random() * 30);
   const number2 = Math.ceil(Math.random() * 30);
   const makeRandomOperator = () => {
@@ -38,8 +39,10 @@ const generateQuestion = () => {
     return ans;
   };
   const rightAnswer = answer(randomOperator).toString();
+
   return cons(questionToString, rightAnswer);
 };
-const runIt = () => makeGame(gameRule, generateQuestion);
 
-export default runIt;
+const calcRunIt = () => makeGame(calcGameRule, calcGenerateQuestion);
+
+export default calcRunIt;
