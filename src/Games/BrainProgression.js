@@ -3,7 +3,6 @@ import {
 } from '../index';
 
 const progGameRule = 'What number is missing in the progression?';
-
 const progGenerateQuestion = () => {
   const makeRandomDisNumber = () => Math.ceil(Math.random() * 8) + 2;
   const randomDisNum = makeRandomDisNumber();
@@ -25,7 +24,6 @@ const progGenerateQuestion = () => {
 
   return cons(questionToString, rightAnswer);
 };
-
 const progRunIt = () => makeGame(progGameRule, progGenerateQuestion);
 
 export default progRunIt;

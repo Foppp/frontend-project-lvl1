@@ -3,7 +3,6 @@ import {
 } from '../index';
 
 const evenGameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
-
 const evenGenerateQuestion = () => {
   const num = Math.ceil(Math.random() * 100);
   const isEvenCheck = (a) => {
@@ -15,7 +14,6 @@ const evenGenerateQuestion = () => {
 
   return cons(num, rightAnswer);
 };
-
 const evenRunIt = () => makeGame(evenGameRule, evenGenerateQuestion);
 
 export default evenRunIt;

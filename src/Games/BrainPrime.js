@@ -3,7 +3,6 @@ import {
 } from '../index';
 
 const primeGameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-
 const primeGenerateQuestion = () => {
   const num = Math.ceil(Math.random() * 100);
   const isPrimeCheck = (x) => {
@@ -16,7 +15,6 @@ const primeGenerateQuestion = () => {
   const rightAnswer = isPrimeCheck(num) === true ? 'yes' : 'no';
   return cons(num, rightAnswer);
 };
-
 const primeRunIt = () => makeGame(primeGameRule, primeGenerateQuestion);
 
 export default primeRunIt;
