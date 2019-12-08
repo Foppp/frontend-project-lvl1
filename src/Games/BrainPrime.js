@@ -13,12 +13,7 @@ const primeGenerateQuestion = () => {
       }
     } return true;
   };
-  const numberIsPrime = () => {
-    const b = isPrimeCheck(num) === true ? 'yes' : 'no';
-    return b;
-  };
-  const rightAnswer = numberIsPrime();
-
+  const rightAnswer = isPrimeCheck(num) === true ? 'yes' : 'no';
   return cons(num, rightAnswer);
 };
 
