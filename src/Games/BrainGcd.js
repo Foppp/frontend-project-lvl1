@@ -6,16 +6,14 @@ const gcdGameRule = 'Find the greatest common divisor of given numbers.';
 const gcdGenerateQuestion = () => {
   const number1 = Math.ceil(Math.random() * 50);
   const number2 = Math.ceil(Math.random() * 50);
-  const makeBiggerDiv = (x, y) => {
-    let biggerDiv = 0;
-    for (let i = 1; i < x; i += 1) {
-      if (x % i === 0 && y % i === 0) {
-        biggerDiv = i;
-      }
-    } return biggerDiv;
-  };
+  let biggerDiv = 0;
+  for (let i = 1; i < number1; i += 1) {
+    if (number1 % i === 0 && number2 % i === 0) {
+      biggerDiv = i;
+    }
+  }
   const questionToString = `${number1} ${number2}`;
-  const rightAnswer = makeBiggerDiv(number1, number2).toString();
+  const rightAnswer = biggerDiv.toString();
   return cons(questionToString, rightAnswer);
 };
 const gcdRunIt = () => makeGame(gcdGameRule, gcdGenerateQuestion);
