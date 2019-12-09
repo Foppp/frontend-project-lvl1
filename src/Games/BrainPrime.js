@@ -5,14 +5,11 @@ import {
 const primeGameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const primeGenerateQuestion = () => {
   const num = Math.ceil(Math.random() * 100);
-  const isPrimeCheck = (x) => {
-    for (let k = 2; k < x; k += 1) {
-      if (x % k === 0) {
-        return false;
-      }
-    } return true;
-  };
-  const rightAnswer = isPrimeCheck(num) === true ? 'yes' : 'no';
+  let isPrime = true;
+  for (let k = 2; k < num; k += 1) {
+    isPrime = (num % k !== 0) ? isPrime : false;
+  }
+  const rightAnswer = (isPrime === true) ? 'yes' : 'no';
   return cons(num, rightAnswer);
 };
 const primeRunIt = () => makeGame(primeGameRule, primeGenerateQuestion);
