@@ -8,8 +8,8 @@ const gcdGenerateQuestion = () => {
   const number2 = Math.ceil(Math.random() * 50);
   const makeBiggerDiv = (x, y) => {
     let biggerDiv = 0;
-    for (let i = 1, k = 1; i < x; k < y, i += 1, k += 1) {
-      if (x % i === 0 && y % k === 0) {
+    for (let i = 1; i < x; i += 1) {
+      if (x % i === 0 && y % i === 0) {
         biggerDiv = i;
       }
     } return biggerDiv;
