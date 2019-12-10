@@ -18,14 +18,9 @@ const makeGame = (gameRule, gameData) => {
     if (rightAnswer !== userAnswer) {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.
  Let's try again, ${userName}!`);
-      break;
-    } else {
-      console.log('Correct!');
-      if (i === 2) {
-        console.log(`Congratulations, ${userName}!`);
-      }
-    }
-  }
+      return;
+    } console.log('Correct!');
+  } console.log(`Congratulations, ${userName}!`);
 };
 
 export {
