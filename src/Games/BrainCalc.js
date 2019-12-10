@@ -19,8 +19,11 @@ const calcGenerateQuestion = () => {
       case '-':
         ans = number1 - number2;
         break;
-      default:
+      case '*':
         ans = number1 * number2;
+        break;
+      default:
+        ans = false;
     }
     return ans;
   };

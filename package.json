@@ -48,6 +48,7 @@
     "eslint-plugin-jest": "^23.0.3"
   },
   "dependencies": {
+    "@hexlet/pairs": "^1.0.10",
     "readline-sync": "^1.4.10"
   }
 }
