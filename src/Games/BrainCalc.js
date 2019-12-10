@@ -6,13 +6,10 @@ const calcGameRule = 'What is the result of the expression?';
 const calcGenerateQuestion = () => {
   const number1 = Math.ceil(Math.random() * 30);
   const number2 = Math.ceil(Math.random() * 30);
-  const makeRandomOperator = () => {
-    const operator = Math.floor(Math.random() * 3);
-    const operatorResult = ['+', '-', '*'];
-    return operatorResult[operator];
-  };
-  const randomOperator = makeRandomOperator();
-  const questionToString = `${number1} ${randomOperator} ${number2}`;
+  const operators = ['+', '-', '*'];
+  const randomOperator = Math.floor(Math.random() * operators.length);
+  const makeOperator = operators[randomOperator];
+  const questionToString = `${number1} ${makeOperator} ${number2}`;
   const answer = (f) => {
     let ans = 0;
     switch (f) {
@@ -27,7 +24,7 @@ const calcGenerateQuestion = () => {
     }
     return ans;
   };
-  const rightAnswer = answer(randomOperator).toString();
+  const rightAnswer = answer(makeOperator).toString();
   return cons(questionToString, rightAnswer);
 };
 const calcRunIt = () => makeGame(calcGameRule, calcGenerateQuestion);
