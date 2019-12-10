@@ -1,13 +1,13 @@
 import {
-  makeGame, cons,
+  makeGame, cons, generateNumber,
 } from '../index';
 
 const calcGameRule = 'What is the result of the expression?';
+const operators = ['+', '-', '*'];
 const calcGenerateQuestion = () => {
-  const number1 = Math.ceil(Math.random() * 30);
-  const number2 = Math.ceil(Math.random() * 30);
-  const operators = ['+', '-', '*'];
-  const randomOperator = Math.floor(Math.random() * operators.length);
+  const number1 = generateNumber(30);
+  const number2 = generateNumber(30);
+  const randomOperator = generateNumber(operators.length);
   const makeOperator = operators[randomOperator];
   const questionToString = `${number1} ${makeOperator} ${number2}`;
   const answer = (f) => {

@@ -1,11 +1,11 @@
 import {
-  makeGame, cons,
+  makeGame, cons, generateNumber,
 } from '../index';
 
 const gcdGameRule = 'Find the greatest common divisor of given numbers.';
 const gcdGenerateQuestion = () => {
-  const number1 = Math.ceil(Math.random() * 50);
-  const number2 = Math.ceil(Math.random() * 50);
+  const number1 = generateNumber(50);
+  const number2 = generateNumber(50);
   let biggerDiv = 0;
   for (let i = 1; i < number1; i += 1) {
     if (number1 % i === 0 && number2 % i === 0) {

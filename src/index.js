@@ -4,6 +4,8 @@ const cons = (x, y) => (f) => f(x, y);
 const car = (pair) => pair((x) => x);
 const cdr = (pair) => pair((x, y) => y);
 
+const generateNumber = (n) => Math.floor(Math.random() * n);
+
 const makeGame = (gameRule, gameData) => {
   console.log('Welcome To The Brain Games!');
   console.log(`${gameRule}`);
@@ -29,5 +31,5 @@ const makeGame = (gameRule, gameData) => {
 };
 
 export {
-  makeGame, cons,
+  makeGame, cons, generateNumber,
 };

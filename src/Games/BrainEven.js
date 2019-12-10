@@ -1,10 +1,10 @@
 import {
-  makeGame, cons,
+  makeGame, cons, generateNumber,
 } from '../index';
 
 const evenGameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
 const evenGenerateQuestion = () => {
-  const num = Math.ceil(Math.random() * 100);
+  const num = generateNumber(99) + 1;
   const isEvenCheck = (a) => {
     if (a % 2 === 0) {
       return true;
