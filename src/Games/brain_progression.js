@@ -16,7 +16,7 @@ const progGenerateQuestion = () => {
       disNum = progressNum;
       continue;
     }
-    newStr += `${progressNum} `;
+    newStr = `${newStr}${progressNum} `;
   }
   const questionToString = newStr;
   const rightAnswer = disNum.toString();
