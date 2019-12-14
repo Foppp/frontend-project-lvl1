@@ -9,10 +9,10 @@ const calcGenerateQuestion = () => {
   const number2 = generateNumber(30);
   const randomOperator = generateNumber(operators.length);
   const makeOperator = operators[randomOperator];
-  const questionToString = `${number1} ${makeOperator} ${number2}`;
-  const answer = (f) => {
+  const isQuestion = `${number1} ${makeOperator} ${number2}`;
+  const answer = (generatedOperator) => {
     let ans = 0;
-    switch (f) {
+    switch (generatedOperator) {
       case '+':
         ans = number1 + number2;
         break;
@@ -23,12 +23,12 @@ const calcGenerateQuestion = () => {
         ans = number1 * number2;
         break;
       default:
-        ans = false;
+        return false;
     }
     return ans;
   };
   const rightAnswer = answer(makeOperator).toString();
-  return cons(questionToString, rightAnswer);
+  return cons(isQuestion, rightAnswer);
 };
 const calcRunIt = () => makeGame(calcGameRule, calcGenerateQuestion);
 

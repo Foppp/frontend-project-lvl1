@@ -3,16 +3,16 @@ import {
 } from '../index';
 
 const evenGameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
-const isEvenCheck = (a) => {
+const isEven = (a) => {
   if (a % 2 === 0) {
     return true;
   } return false;
 };
 const evenGenerateQuestion = () => {
-  const num = generateNumber(99) + 1;
-  const rightAnswer = isEvenCheck(num) ? 'yes' : 'no';
+  const isQuestion = generateNumber(99) + 1;
+  const rightAnswer = isEven(isQuestion) ? 'yes' : 'no';
 
-  return cons(num, rightAnswer);
+  return cons(isQuestion, rightAnswer);
 };
 const evenRunIt = () => makeGame(evenGameRule, evenGenerateQuestion);
 
