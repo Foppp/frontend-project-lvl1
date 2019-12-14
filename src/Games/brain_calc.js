@@ -4,7 +4,7 @@ import { makeGame, generateNumber } from '../index';
 
 const calcGameRule = 'What is the result of the expression?';
 const operators = ['+', '-', '*'];
-const answer = (generatedOperator, num1, num2) => {
+const answerCalculate = (generatedOperator, num1, num2) => {
   let ans = 0;
   switch (generatedOperator) {
     case '+':
@@ -27,7 +27,7 @@ const calcGenerateQuestion = () => {
   const randomOperator = generateNumber(0, operators.length - 1);
   const makeOperator = operators[randomOperator];
   const isQuestion = `${number1} ${makeOperator} ${number2}`;
-  const rightAnswer = answer(makeOperator, number1, number2).toString();
+  const rightAnswer = answerCalculate(makeOperator, number1, number2).toString();
   return cons(isQuestion, rightAnswer);
 };
 const calcRunIt = () => makeGame(calcGameRule, calcGenerateQuestion);
