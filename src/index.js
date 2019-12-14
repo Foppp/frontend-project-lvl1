@@ -1,6 +1,6 @@
 import { cons, car, cdr } from '@hexlet/pairs';
 
-const readlineSync = require('readline-sync');
+import readlineSync from 'readline-sync';
 
 const generateNumber = (n) => Math.floor(Math.random() * n);
 
