@@ -9,7 +9,8 @@ const makeGame = (gameRule, gameData) => {
   console.log(`${gameRule}`);
   const userName = readlineSync.question('What Is Your Name? ');
   console.log(`Hello, ${userName}`);
-  for (let i = 0; i < 3; i += 1) {
+  const gameCycles = 3;
+  for (let i = 0; i < gameCycles; i += 1) {
     const questions = gameData();
     const ask = car(questions);
     const rightAnswer = cdr(questions);
