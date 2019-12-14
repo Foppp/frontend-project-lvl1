@@ -1,6 +1,6 @@
-import {
-  makeGame, cons, generateNumber,
-} from '../index';
+import { cons } from '@hexlet/pairs';
+
+import { makeGame, generateNumber } from '../index';
 
 const progGameRule = 'What number is missing in the progression?';
 const progGenerateQuestion = () => {
