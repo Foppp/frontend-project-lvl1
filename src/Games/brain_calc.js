@@ -1,13 +1,13 @@
-import {
-  makeGame, cons, generateNumber,
-} from '../index';
+import { cons } from '@hexlet/pairs';
+
+import { makeGame, generateNumber } from '../index';
 
 const calcGameRule = 'What is the result of the expression?';
 const operators = ['+', '-', '*'];
 const calcGenerateQuestion = () => {
-  const number1 = generateNumber(30);
-  const number2 = generateNumber(30);
-  const randomOperator = generateNumber(operators.length);
+  const number1 = generateNumber(1, 30);
+  const number2 = generateNumber(1, 30);
+  const randomOperator = generateNumber(0, operators.length);
   const makeOperator = operators[randomOperator];
   const isQuestion = `${number1} ${makeOperator} ${number2}`;
   const answer = (generatedOperator) => {

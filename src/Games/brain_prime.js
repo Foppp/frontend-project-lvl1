@@ -1,6 +1,6 @@
-import {
-  makeGame, cons, generateNumber,
-} from '../index';
+import { cons } from '@hexlet/pairs';
+
+import { makeGame, generateNumber } from '../index';
 
 const primeGameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const isPrime = (num) => {
@@ -11,7 +11,7 @@ const isPrime = (num) => {
   return isPrimeNumber;
 };
 const primeGenerateQuestion = () => {
-  const isQuestion = generateNumber(99) + 1;
+  const isQuestion = generateNumber(1, 100);
   const rightAnswer = (isPrime(isQuestion) === true) ? 'yes' : 'no';
   return cons(isQuestion, rightAnswer);
 };

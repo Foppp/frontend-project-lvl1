@@ -1,8 +1,8 @@
-import { cons, car, cdr } from '@hexlet/pairs';
+import { car, cdr } from '@hexlet/pairs';
 
 import readlineSync from 'readline-sync';
 
-const generateNumber = (n) => Math.floor(Math.random() * n);
+const generateNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
 const makeGame = (gameRule, gameData) => {
   console.log('Welcome To The Brain Games!');
@@ -25,5 +25,5 @@ const makeGame = (gameRule, gameData) => {
 };
 
 export {
-  makeGame, cons, generateNumber,
+  makeGame, generateNumber,
 };

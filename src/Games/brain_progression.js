@@ -4,8 +4,8 @@ import { makeGame, generateNumber } from '../index';
 
 const progGameRule = 'What number is missing in the progression?';
 const progGenerateQuestion = () => {
-  const randomDisNum = generateNumber(8) + 2;
-  const randomStepBetweenNum = generateNumber(29) + 1;
+  const randomDisNum = generateNumber(2, 10);
+  const randomStepBetweenNum = generateNumber(1, 30);
   let progressNum = 1;
   let disNum = 0;
   let newStr = '';

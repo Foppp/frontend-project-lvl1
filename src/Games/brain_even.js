@@ -1,6 +1,6 @@
-import {
-  makeGame, cons, generateNumber,
-} from '../index';
+import { cons } from '@hexlet/pairs';
+
+import { makeGame, generateNumber } from '../index';
 
 const evenGameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
 const isEven = (a) => {
@@ -9,7 +9,7 @@ const isEven = (a) => {
   } return false;
 };
 const evenGenerateQuestion = () => {
-  const isQuestion = generateNumber(99) + 1;
+  const isQuestion = generateNumber(1, 100);
   const rightAnswer = isEven(isQuestion) ? 'yes' : 'no';
 
   return cons(isQuestion, rightAnswer);
