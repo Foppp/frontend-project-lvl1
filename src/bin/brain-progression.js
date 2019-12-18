@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import progRunIt from '../Games/brain_progression';
+import progRunIt from '../Games/progression';
 
 progRunIt();

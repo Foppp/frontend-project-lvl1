@@ -1,6 +1,8 @@
 import { cons } from '@hexlet/pairs';
 
-import { makeGame, generateNumber } from '../index';
+import generateNumber from '../utils';
+
+import makeGame from '../index';
 
 const gcdGameRule = 'Find the greatest common divisor of given numbers.';
 const gcdCalculate = (firstNumber, secondNumber) => {

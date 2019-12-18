@@ -2,14 +2,12 @@ import { car, cdr } from '@hexlet/pairs';
 
 import readlineSync from 'readline-sync';
 
-const generateNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
-
+const rightAnswerCycles = 3;
 const makeGame = (gameRule, gameData) => {
   console.log('Welcome To The Brain Games!');
   console.log(`${gameRule}`);
   const userName = readlineSync.question('What Is Your Name? ');
   console.log(`Hello, ${userName}`);
-  const rightAnswerCycles = 3;
   for (let i = 0; i < rightAnswerCycles; i += 1) {
     const questions = gameData();
     const ask = car(questions);
@@ -24,6 +22,4 @@ const makeGame = (gameRule, gameData) => {
   } console.log(`Congratulations, ${userName}!`);
 };
 
-export {
-  makeGame, generateNumber,
-};
+export default makeGame;

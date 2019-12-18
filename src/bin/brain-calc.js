@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import calcRunIt from '../Games/brain_calc';
+import calcRunIt from '../Games/calc';
 
 calcRunIt();

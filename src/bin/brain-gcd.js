@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import gcdRunIt from '../Games/brain_gcd';
+import gcdRunIt from '../Games/gcd';
 
 gcdRunIt();
