@@ -4,14 +4,13 @@ import generateNumber from '../utils';
 
 import makeGame from '../index';
 
-const evenGameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
+const gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
 const isEven = (a) => a % 2 === 0;
-const evenGenerateQuestion = () => {
+const generateData = () => {
   const question = generateNumber(1, 100);
   const rightAnswer = isEven(question) ? 'yes' : 'no';
-
   return cons(question, rightAnswer);
 };
-const evenRunIt = () => makeGame(evenGameRule, evenGenerateQuestion);
+const runGame = () => makeGame(gameRule, generateData);
 
-export default evenRunIt;
+export default runGame;

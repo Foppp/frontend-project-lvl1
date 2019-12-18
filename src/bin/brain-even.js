@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import evenRunIt from '../Games/even';
+import runGame from '../Games/even';
 
-evenRunIt();
+runGame();

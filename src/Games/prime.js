@@ -4,7 +4,7 @@ import generateNumber from '../utils';
 
 import makeGame from '../index';
 
-const primeGameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const isPrime = (number) => {
   for (let k = 2; k < number; k += 1) {
     if (number % k === 0) {
@@ -12,11 +12,11 @@ const isPrime = (number) => {
     }
   } return number > 1;
 };
-const primeGenerateQuestion = () => {
+const generateData = () => {
   const question = generateNumber(1, 100);
   const rightAnswer = (isPrime(question) === true) ? 'yes' : 'no';
   return cons(question, rightAnswer);
 };
-const primeRunIt = () => makeGame(primeGameRule, primeGenerateQuestion);
+const runGame = () => makeGame(gameRule, generateData);
 
-export default primeRunIt;
+export default runGame;

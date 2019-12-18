@@ -4,23 +4,23 @@ import generateNumber from '../utils';
 
 import makeGame from '../index';
 
-const gcdGameRule = 'Find the greatest common divisor of given numbers.';
-const gcdCalculate = (firstNumber, secondNumber) => {
-  let biggerDiv = 0;
-  for (let i = 1; i < firstNumber; i += 1) {
-    if (firstNumber % i === 0 && secondNumber % i === 0) {
+const gameRule = 'Find the greatest common divisor of given numbers.';
+const makeBiggerDiv = (num1, num2) => {
+  let biggerDiv;
+  for (let i = 1; i < num1; i += 1) {
+    if (num1 % i === 0 && num2 % i === 0) {
       biggerDiv = i;
     }
   }
   return biggerDiv;
 };
-const gcdGenerateQuestion = () => {
+const generateData = () => {
   const number1 = generateNumber(1, 50);
   const number2 = generateNumber(1, 50);
   const question = `${number1} ${number2}`;
-  const rightAnswer = gcdCalculate(number1, number2).toString();
+  const rightAnswer = makeBiggerDiv(number1, number2).toString();
   return cons(question, rightAnswer);
 };
-const gcdRunIt = () => makeGame(gcdGameRule, gcdGenerateQuestion);
+const runGame = () => makeGame(gameRule, generateData);
 
-export default gcdRunIt;
+export default runGame;

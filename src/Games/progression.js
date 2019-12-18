@@ -4,9 +4,9 @@ import generateNumber from '../utils';
 
 import makeGame from '../index';
 
-const progGameRule = 'What number is missing in the progression?';
+const gameRule = 'What number is missing in the progression?';
 const progressionLength = 10;
-const progGenerateQuestion = () => {
+const generateData = () => {
   const missingNumberIndex = generateNumber(2, 10);
   const progressionSteps = generateNumber(1, 30);
   let progressionNumber = 1;
@@ -26,6 +26,6 @@ const progGenerateQuestion = () => {
 
   return cons(question, rightAnswer);
 };
-const progRunIt = () => makeGame(progGameRule, progGenerateQuestion);
+const runGame = () => makeGame(gameRule, generateData);
 
-export default progRunIt;
+export default runGame;
