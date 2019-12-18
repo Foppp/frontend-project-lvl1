@@ -4,17 +4,17 @@ import { makeGame, generateNumber } from '../index';
 
 const calcGameRule = 'What is the result of the expression?';
 const operators = ['+', '-', '*'];
-const calculate = (operator, num1, num2) => {
+const calculate = (operator, number1, number2) => {
   let result;
   switch (operator) {
     case '+':
-      result = num1 + num2;
+      result = number1 + number2;
       break;
     case '-':
-      result = num1 - num2;
+      result = number1 - number2;
       break;
     case '*':
-      result = num1 * num2;
+      result = number1 * number2;
       break;
     default:
       return false;

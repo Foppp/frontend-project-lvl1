@@ -3,23 +3,24 @@ import { cons } from '@hexlet/pairs';
 import { makeGame, generateNumber } from '../index';
 
 const progGameRule = 'What number is missing in the progression?';
+const progressionLength = 10;
 const progGenerateQuestion = () => {
-  const randomDisNum = generateNumber(2, 10);
-  const randomStepBetweenNum = generateNumber(1, 30);
-  let progressNum = 1;
-  let disNum = 0;
+  const missingNumberIndex = generateNumber(2, 10);
+  const progressionSteps = generateNumber(1, 30);
+  let progressionNumber = 1;
+  let missingNumber;
   let newStr = '';
-  for (let k = 2; k <= 10; k += 1) {
-    progressNum += randomStepBetweenNum;
-    if (k === randomDisNum) {
+  for (let k = 2; k <= progressionLength; k += 1) {
+    progressionNumber += progressionSteps;
+    if (k === missingNumberIndex) {
       newStr += '.. ';
-      disNum = progressNum;
+      missingNumber = progressionNumber;
       continue;
     }
-    newStr = `${newStr}${progressNum} `;
+    newStr = `${newStr}${progressionNumber} `;
   }
   const question = newStr;
-  const rightAnswer = disNum.toString();
+  const rightAnswer = missingNumber.toString();
 
   return cons(question, rightAnswer);
 };
