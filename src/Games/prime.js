@@ -11,9 +11,9 @@ const isPrime = (num) => {
   return isPrimeNumber;
 };
 const primeGenerateQuestion = () => {
-  const isQuestion = generateNumber(1, 100);
-  const rightAnswer = (isPrime(isQuestion) === true) ? 'yes' : 'no';
-  return cons(isQuestion, rightAnswer);
+  const question = generateNumber(1, 100);
+  const rightAnswer = (isPrime(question) === true) ? 'yes' : 'no';
+  return cons(question, rightAnswer);
 };
 const primeRunIt = () => makeGame(primeGameRule, primeGenerateQuestion);
 

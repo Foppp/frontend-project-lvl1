@@ -18,10 +18,10 @@ const progGenerateQuestion = () => {
     }
     newStr = `${newStr}${progressNum} `;
   }
-  const isQuestion = newStr;
+  const question = newStr;
   const rightAnswer = disNum.toString();
 
-  return cons(isQuestion, rightAnswer);
+  return cons(question, rightAnswer);
 };
 const progRunIt = () => makeGame(progGameRule, progGenerateQuestion);
 

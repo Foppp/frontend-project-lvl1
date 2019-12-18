@@ -15,9 +15,9 @@ const gcdCalculate = (firstNumber, secondNumber) => {
 const gcdGenerateQuestion = () => {
   const number1 = generateNumber(1, 50);
   const number2 = generateNumber(1, 50);
-  const isQuestion = `${number1} ${number2}`;
+  const question = `${number1} ${number2}`;
   const rightAnswer = gcdCalculate(number1, number2).toString();
-  return cons(isQuestion, rightAnswer);
+  return cons(question, rightAnswer);
 };
 const gcdRunIt = () => makeGame(gcdGameRule, gcdGenerateQuestion);
 

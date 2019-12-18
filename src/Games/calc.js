@@ -4,31 +4,31 @@ import { makeGame, generateNumber } from '../index';
 
 const calcGameRule = 'What is the result of the expression?';
 const operators = ['+', '-', '*'];
-const answerCalculate = (generatedOperator, num1, num2) => {
-  let ans = 0;
-  switch (generatedOperator) {
+const calculate = (operator, num1, num2) => {
+  let result;
+  switch (operator) {
     case '+':
-      ans = num1 + num2;
+      result = num1 + num2;
       break;
     case '-':
-      ans = num1 - num2;
+      result = num1 - num2;
       break;
     case '*':
-      ans = num1 * num2;
+      result = num1 * num2;
       break;
     default:
       return false;
   }
-  return ans;
+  return result;
 };
 const calcGenerateQuestion = () => {
   const number1 = generateNumber(1, 30);
   const number2 = generateNumber(1, 30);
   const randomOperator = generateNumber(0, operators.length - 1);
   const makeOperator = operators[randomOperator];
-  const isQuestion = `${number1} ${makeOperator} ${number2}`;
-  const rightAnswer = answerCalculate(makeOperator, number1, number2).toString();
-  return cons(isQuestion, rightAnswer);
+  const question = `${number1} ${makeOperator} ${number2}`;
+  const rightAnswer = calculate(makeOperator, number1, number2).toString();
+  return cons(question, rightAnswer);
 };
 const calcRunIt = () => makeGame(calcGameRule, calcGenerateQuestion);
 
