@@ -2,7 +2,7 @@ import { cons } from '@hexlet/pairs';
 
 import generateNumber from '../utils';
 
-import makeGame from '../index';
+import makeGame from '..';
 
 const gameRule = 'What number is missing in the progression?';
 const progressionLength = 10;
@@ -15,11 +15,11 @@ const generateData = () => {
   for (let k = 2; k <= progressionLength; k += 1) {
     progressionNumber += progressionStep;
     if (k === missingNumberIndex) {
-      newStr += '.. ';
+      newStr = `${newStr}.. `;
       missingNumber = progressionNumber;
-      continue;
+    } else {
+      newStr = `${newStr}${progressionNumber} `;
     }
-    newStr = `${newStr}${progressionNumber} `;
   }
   const question = newStr;
   const rightAnswer = missingNumber.toString();
