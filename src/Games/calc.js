@@ -2,10 +2,10 @@ import { cons } from '@hexlet/pairs';
 
 import generateNumber from '../utils';
 
-import makeGame from '../index';
+import makeGame from '..';
 
 const gameRule = 'What is the result of the expression?';
-const operatorList = ['+', '-', '*'];
+const operators = ['+', '-', '*'];
 const calculateResult = (operator, number1, number2) => {
   let result;
   switch (operator) {
@@ -26,8 +26,8 @@ const calculateResult = (operator, number1, number2) => {
 const generateData = () => {
   const number1 = generateNumber(1, 30);
   const number2 = generateNumber(1, 30);
-  const randomOperatorIndex = generateNumber(0, operatorList.length - 1);
-  const randomOperator = operatorList[randomOperatorIndex];
+  const randomOperatorIndex = generateNumber(0, operators.length - 1);
+  const randomOperator = operators[randomOperatorIndex];
   const question = `${number1} ${randomOperator} ${number2}`;
   const rightAnswer = calculateResult(randomOperator, number1, number2).toString();
   return cons(question, rightAnswer);

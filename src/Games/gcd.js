@@ -2,7 +2,7 @@ import { cons } from '@hexlet/pairs';
 
 import generateNumber from '../utils';
 
-import makeGame from '../index';
+import makeGame from '..';
 
 const gameRule = 'Find the greatest common divisor of given numbers.';
 const makeBiggerDenom = (num1, num2) => {
