@@ -5,6 +5,7 @@ import generateNumber from '../utils';
 import makeGame from '..';
 
 const gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const maxRandomNum = 100;
 const isPrime = (number) => {
   if (number < 2) {
     return false;
@@ -17,7 +18,7 @@ const isPrime = (number) => {
   } return true;
 };
 const generateData = () => {
-  const question = generateNumber(1, 100);
+  const question = generateNumber(1, maxRandomNum);
   const rightAnswer = (isPrime(question) === true) ? 'yes' : 'no';
   return cons(question, rightAnswer);
 };
