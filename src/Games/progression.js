@@ -5,22 +5,22 @@ import generateNumber from '../utils';
 import makeGame from '..';
 
 const gameRule = 'What number is missing in the progression?';
-const progressionLength = 10;
-const maxDiffNumber = 20;
-const maxMissingIndexNumber = 8;
+const sequenceLength = 10;
+const maxDiffMember = 20;
+const maxMissingIndexMember = 8;
 let missingMember;
 const generateData = () => {
-  const diffMember = generateNumber(1, maxDiffNumber);
-  const missingIndexMember = generateNumber(0, maxMissingIndexNumber);
-  const arr = [generateNumber(1, maxDiffNumber)];
-  for (let i = 0; i < progressionLength; i += 1) {
-    arr.push(arr[i] + diffMember);
+  const diffMember = generateNumber(1, maxDiffMember);
+  const missingIndexMember = generateNumber(0, maxMissingIndexMember);
+  const sequenceStore = [generateNumber(1, maxDiffMember)];
+  for (let i = 0; i < sequenceLength; i += 1) {
+    sequenceStore.push(sequenceStore[i] + diffMember);
     if (i === missingIndexMember) {
-      missingMember = arr[i];
-      arr[i] = '..';
+      missingMember = sequenceStore[i];
+      sequenceStore[i] = '..';
     }
   }
-  const question = arr.join(' ');
+  const question = sequenceStore.join(' ');
   const rightAnswer = missingMember.toString();
   return cons(question, rightAnswer);
 };
