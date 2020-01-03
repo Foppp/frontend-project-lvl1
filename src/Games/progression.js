@@ -12,15 +12,15 @@ let missingMember;
 const generateData = () => {
   const diffMember = generateNumber(1, maxDiffMember);
   const missingIndexMember = generateNumber(0, maxMissingIndexMember);
-  const sequenceStore = [generateNumber(1, maxDiffMember)];
+  const progressionMembers = [generateNumber(1, maxDiffMember)];
   for (let i = 0; i < sequenceLength; i += 1) {
-    sequenceStore.push(sequenceStore[i] + diffMember);
+    progressionMembers.push(progressionMembers[i] + diffMember);
     if (i === missingIndexMember) {
-      missingMember = sequenceStore[i];
-      sequenceStore[i] = '..';
+      missingMember = progressionMembers[i];
+      progressionMembers[i] = '..';
     }
   }
-  const question = sequenceStore.join(' ');
+  const question = progressionMembers.join(' ');
   const rightAnswer = missingMember.toString();
   return cons(question, rightAnswer);
 };
