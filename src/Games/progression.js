@@ -6,21 +6,21 @@ import makeGame from '..';
 
 const gameRule = 'What number is missing in the progression?';
 const sequenceLength = 10;
-const maxDiffMember = 20;
-const maxMissingIndexMember = 8;
+const maxDifference = 20;
+const maxMissingMemberIndex = 8;
 let missingMember;
 const generateData = () => {
-  const diffMember = generateNumber(1, maxDiffMember);
-  const missingIndexMember = generateNumber(0, maxMissingIndexMember);
-  const progressionMembers = [generateNumber(1, maxDiffMember)];
+  const difference = generateNumber(1, maxDifference);
+  const missingMemberIndex = generateNumber(0, maxMissingMemberIndex);
+  const progression = [generateNumber(1, maxDifference)];
   for (let i = 0; i < sequenceLength; i += 1) {
-    progressionMembers.push(progressionMembers[i] + diffMember);
-    if (i === missingIndexMember) {
-      missingMember = progressionMembers[i];
-      progressionMembers[i] = '..';
+    progression.push(progression[i] + difference);
+    if (i === missingMemberIndex) {
+      missingMember = progression[i];
+      progression[i] = '..';
     }
   }
-  const question = progressionMembers.join(' ');
+  const question = progression.join(' ');
   const rightAnswer = missingMember.toString();
   return cons(question, rightAnswer);
 };
