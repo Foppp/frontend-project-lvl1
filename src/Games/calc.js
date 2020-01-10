@@ -7,7 +7,7 @@ import makeGame from '..';
 const gameRule = 'What is the result of the expression?';
 const maxRandomNum = 30;
 const operators = ['+', '-', '*'];
-const calculateResult = (operator, number1, number2) => {
+const calculate = (operator, number1, number2) => {
   let result;
   switch (operator) {
     case '+':
@@ -30,7 +30,7 @@ const generateData = () => {
   const randomOperatorIndex = generateNumber(0, operators.length - 1);
   const randomOperator = operators[randomOperatorIndex];
   const question = `${number1} ${randomOperator} ${number2}`;
-  const rightAnswer = calculateResult(randomOperator, number1, number2).toString();
+  const rightAnswer = calculate(randomOperator, number1, number2).toString();
   return cons(question, rightAnswer);
 };
 const runGame = () => makeGame(gameRule, generateData);
