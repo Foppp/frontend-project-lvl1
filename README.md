@@ -22,7 +22,7 @@
    $   brain-even                                                           
 ```
 
-Пример игры [тут]([![asciicast](https://asciinema.org/a/GcTIrEcMOMpIdkJVZPDybfvsi.svg)](https://asciinema.org/a/GcTIrEcMOMpIdkJVZPDybfvsi))
+Пример игры [тут] ([![asciicast](https://asciinema.org/a/GcTIrEcMOMpIdkJVZPDybfvsi.svg)](https://asciinema.org/a/GcTIrEcMOMpIdkJVZPDybfvsi))
 
 ## Игра: "Калькулятор"
 
@@ -34,7 +34,7 @@
    $   brain-calc                                                          
 ```
 
-Пример игры [тут]([![asciicast](https://asciinema.org/a/3vuSsEdbQHTPA8dfjk7a9qR4C.svg)](https://asciinema.org/a/3vuSsEdbQHTPA8dfjk7a9qR4C))
+Пример игры [тут] ([![asciicast](https://asciinema.org/a/3vuSsEdbQHTPA8dfjk7a9qR4C.svg)](https://asciinema.org/a/3vuSsEdbQHTPA8dfjk7a9qR4C))
 
 ## Игра "НОД"
 
@@ -46,7 +46,7 @@
    $   brain-gcd                                                           
 ```
 
-Пример игры [*тут*] ([![asciicast](https://asciinema.org/a/IEWneXEjuDaGSkcdJebhsShxf.svg)](https://asciinema.org/a/IEWneXEjuDaGSkcdJebhsShxf))
+Пример игры [тут] ([![asciicast](https://asciinema.org/a/IEWneXEjuDaGSkcdJebhsShxf.svg)](https://asciinema.org/a/IEWneXEjuDaGSkcdJebhsShxf))
 
 
 ## Игра "Арифметическая прогрессия"
@@ -59,7 +59,7 @@
    $   brain-progression                                                      
 ```
 
-Пример игры [*тут*] ([![asciicast](https://asciinema.org/a/5bHWm1GDS1oNXFMGug7yHExQ5.svg)](https://asciinema.org/a/5bHWm1GDS1oNXFMGug7yHExQ5))
+Пример игры [тут] ([![asciicast](https://asciinema.org/a/5bHWm1GDS1oNXFMGug7yHExQ5.svg)](https://asciinema.org/a/5bHWm1GDS1oNXFMGug7yHExQ5))
 
 ## Игра "Простое ли число?"
 
@@ -71,7 +71,7 @@
     $    brain-prime                                                      
 ```
 
-Пример игры [*тут*] ([![asciicast](https://asciinema.org/a/KqEWyUlAOrDeRTQSfqmoWk59R.svg)](https://asciinema.org/a/KqEWyUlAOrDeRTQSfqmoWk59R))
+Пример игры [тут] ([![asciicast](https://asciinema.org/a/KqEWyUlAOrDeRTQSfqmoWk59R.svg)](https://asciinema.org/a/KqEWyUlAOrDeRTQSfqmoWk59R))
 
 
 ## Brain Even ##
