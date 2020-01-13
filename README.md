@@ -2,6 +2,78 @@
 [![Build Status](https://travis-ci.org/Foppp/frontend-project-lvl1.svg?branch=master)](https://travis-ci.org/Foppp/frontend-project-lvl1)  [![Maintainability](https://api.codeclimate.com/v1/badges/26daa182e6183294e7fb/maintainability)](https://codeclimate.com/github/Foppp/frontend-project-lvl1/maintainability)
 
 
+# Brian Games
+
+Установка: 
+
+```
+    $   npm install -g yura-first-frontend-project                   
+```
+
+Описание игр:
+
+## Игра: "Проверка на чётность"
+
+Показывается случайное число. Нужно ответить yes, если число чётное, или no — если нечётное!
+
+Запуск игры:
+
+```
+   $   brain-even                                                           
+```
+
+Пример игры *тут*
+
+## Игра: "Калькулятор"
+
+Показывается случайное математическое выражение, например 35 + 16, которое нужно вычислить и записать правильный ответ.
+
+Запуск игры:
+
+```
+   $   brain-calc                                                          
+```
+
+Пример игры *тут*
+
+## Игра "НОД"
+
+Показывается два случайных числа, например, 25 50. Нужно вычислить и ввести наибольший общий делитель этих чисел.
+
+Запуск игры:
+
+```
+   $   brain-gcd                                                           
+```
+
+Пример игры *тут*
+
+
+## Игра "Арифметическая прогрессия"
+
+Показывается ряд чисел, образующий арифметическую прогрессию, заменив любое из чисел двумя точками. Нужно определить это число.
+
+Запуск игры:
+
+```
+   $   brain-progression                                                      
+```
+
+Пример игры *тут*
+
+## Игра "Простое ли число?"
+
+Показывается случайное число. Нужно ответить yes, если число простое, или no — если нет!
+
+Запуск игры:
+
+```
+    $    brain-prime                                                      
+```
+
+Пример игры *тут*
+
+
 ## Brain Even ##
 [![asciicast](https://asciinema.org/a/GcTIrEcMOMpIdkJVZPDybfvsi.svg)](https://asciinema.org/a/GcTIrEcMOMpIdkJVZPDybfvsi)
 
