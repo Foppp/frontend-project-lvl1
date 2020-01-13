@@ -22,7 +22,7 @@
    $   brain-even                                                           
 ```
 
-Пример игры [тут]([![asciicast](https://asciinema.org/a/GcTIrEcMOMpIdkJVZPDybfvsi.svg)](https://asciinema.org/a/GcTIrEcMOMpIdkJVZPDybfvsi))
+Пример игры [тут]([![asciicast](https://asciinema.org/a/GcTIrEcMOMpIdkJVZPDybfvsi.svg)](https://asciinema.org/a/GcTIrEcMOMpIdkJVZPDybfvsi)
 
 ## Игра: "Калькулятор"
 
@@ -46,7 +46,7 @@
    $   brain-gcd                                                           
 ```
 
-Пример игры [тут]([![asciicast](https://asciinema.org/a/IEWneXEjuDaGSkcdJebhsShxf.svg)](https://asciinema.org/a/IEWneXEjuDaGSkcdJebhsShxf))
+Пример игры [тут](https://asciinema.org/a/IEWneXEjuDaGSkcdJebhsShxf)
 
 
 ## Игра "Арифметическая прогрессия"
