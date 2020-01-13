@@ -22,11 +22,11 @@
    $   brain-even                                                           
 ```
 
-Пример игры *тут*
+Пример игры [*тут*] ([![asciicast](https://asciinema.org/a/GcTIrEcMOMpIdkJVZPDybfvsi.svg)](https://asciinema.org/a/GcTIrEcMOMpIdkJVZPDybfvsi))
 
 ## Игра: "Калькулятор"
 
-Показывается случайное математическое выражение, например 35 + 16, которое нужно вычислить и записать правильный ответ.
+Показывается случайное математическое выражение, например ***35 + 16***, которое нужно вычислить и записать правильный ответ.
 
 Запуск игры:
 
@@ -34,11 +34,11 @@
    $   brain-calc                                                          
 ```
 
-Пример игры *тут*
+Пример игры [*тут*] ([![asciicast](https://asciinema.org/a/3vuSsEdbQHTPA8dfjk7a9qR4C.svg)](https://asciinema.org/a/3vuSsEdbQHTPA8dfjk7a9qR4C))
 
 ## Игра "НОД"
 
-Показывается два случайных числа, например, 25 50. Нужно вычислить и ввести наибольший общий делитель этих чисел.
+Показывается два случайных числа, например, ***25 50***. Нужно вычислить и ввести наибольший общий делитель этих чисел.
 
 Запуск игры:
 
@@ -46,7 +46,7 @@
    $   brain-gcd                                                           
 ```
 
-Пример игры *тут*
+Пример игры [*тут*] ([![asciicast](https://asciinema.org/a/IEWneXEjuDaGSkcdJebhsShxf.svg)](https://asciinema.org/a/IEWneXEjuDaGSkcdJebhsShxf))
 
 
 ## Игра "Арифметическая прогрессия"
@@ -59,7 +59,7 @@
    $   brain-progression                                                      
 ```
 
-Пример игры *тут*
+Пример игры [*тут*] ([![asciicast](https://asciinema.org/a/5bHWm1GDS1oNXFMGug7yHExQ5.svg)](https://asciinema.org/a/5bHWm1GDS1oNXFMGug7yHExQ5))
 
 ## Игра "Простое ли число?"
 
@@ -71,7 +71,7 @@
     $    brain-prime                                                      
 ```
 
-Пример игры *тут*
+Пример игры [*тут*] ([![asciicast](https://asciinema.org/a/KqEWyUlAOrDeRTQSfqmoWk59R.svg)](https://asciinema.org/a/KqEWyUlAOrDeRTQSfqmoWk59R))
 
 
 ## Brain Even ##
