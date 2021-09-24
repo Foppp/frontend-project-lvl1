@@ -4,71 +4,77 @@
 
 # Brian Games
 
-Установка: 
+* Setting up the project environment (npm, babel, eslint, node.js)
+* Code analysis / Eslint
+* Checking code with CodeClimate
+* Continuous Integration / CI (Github Actions, Travis)
+* working with the command line
 
-```
-    $   npm install -g yura-first-frontend-project                   
-```
 
-Описание игр:
+## Game: "Is Even"
 
-## Игра: "Проверка на чётность"
+A random number is shown. You need to answer "yes" if the number is even, or "no" if it is odd!
 
-Показывается случайное число. Нужно ответить **yes**, если число чётное, или **no** — если нечётное!
-
-Запуск игры:
+Start:
 
 ```
    $   brain-even                                                           
 ```
 
-Пример игры [-> тут <-](https://asciinema.org/a/GcTIrEcMOMpIdkJVZPDybfvsi)
+Example [-> here <-](https://asciinema.org/a/GcTIrEcMOMpIdkJVZPDybfvsi)
 
-## Игра: "Калькулятор"
+## Game: "Calculator"
 
-Показывается случайное математическое выражение, например ***35 + 16***, которое нужно вычислить и записать правильный ответ.
+A random mathematical expression is shown, for example "35 + 16", which you need to calculate and write down the correct answer.
 
-Запуск игры:
+Start
 
 ```
    $   brain-calc                                                          
 ```
 
-Пример игры [-> тут <-](https://asciinema.org/a/3vuSsEdbQHTPA8dfjk7a9qR4C)
+Example [-> here <-](https://asciinema.org/a/3vuSsEdbQHTPA8dfjk7a9qR4C)
 
-## Игра "НОД"
+## Game: "Nod"
 
-Показывается два случайных числа, например, ***25*** и ***50***. Нужно вычислить и ввести наибольший общий делитель этих чисел.
+Two random numbers are shown, for example "25" and "50". You need to calculate and enter the greatest common divisor of these numbers.
 
-Запуск игры:
+Start:
 
 ```
    $   brain-gcd                                                           
 ```
 
-Пример игры [-> тут <-](https://asciinema.org/a/IEWneXEjuDaGSkcdJebhsShxf)
+Example [-> here <-](https://asciinema.org/a/IEWneXEjuDaGSkcdJebhsShxf)
 
 
-## Игра "Арифметическая прогрессия"
+## Game: "Arithmetic progression"
 
-Показывается ряд чисел, образующий арифметическую прогрессию, заменив любое из чисел двумя точками. Нужно определить это число.
+A series of numbers is shown, forming an arithmetic progression, replacing any of the numbers with two dots. It is necessary to determine this number.
 
-Запуск игры:
+Start:
 
 ```
    $   brain-progression                                                      
 ```
 
-Пример игры [-> тут <-](https://asciinema.org/a/5bHWm1GDS1oNXFMGug7yHExQ5)
+Example [-> here <-](https://asciinema.org/a/5bHWm1GDS1oNXFMGug7yHExQ5)
 
-## Игра "Простое ли число?"
+## Game: "Is it a prime number?"
 
-Показывается случайное число. Нужно ответить **yes**, если число простое, или **no** — если нет!
+A random number is shown. You need to answer "yes" if the number is prime, or "no" if not!
 
-Запуск игры:
+Start:
 
 ```
     $    brain-prime                                                      
 ```
 
-Пример игры [-> тут <-](https://asciinema.org/a/KqEWyUlAOrDeRTQSfqmoWk59R)
+Example [-> here <-](https://asciinema.org/a/KqEWyUlAOrDeRTQSfqmoWk59R)
+
+
+Install: 
+
+```
+    $   npm install -g yura-first-frontend-project                   
+```
