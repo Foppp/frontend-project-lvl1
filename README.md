@@ -4,11 +4,16 @@
 
 # Brian Games
 
+## The program offers to user one of five math command line console games and processes his answers.
+## The main task was to set up the environment, install applications through the package manager, 
+## connect additional libraries, create a git repository, work with the terminal and set up a linter.
+
+Main goals:
 * Setting up the project environment (npm, babel, eslint, node.js)
 * Code analysis / Eslint
 * Checking code with CodeClimate
 * Continuous Integration / CI (Github Actions, Travis)
-* working with the command line
+* Working with the command line
 
 
 ## Game: "Is Even"
